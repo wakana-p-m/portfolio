@@ -41,23 +41,30 @@ mybookname/
 ├── references.bib
 └── requirements.txt
 ```
-The, build book's HTML.
+Then, build book's HTML.
 ```
 jupyter-book build mybookname/
+```
+
+```{note}
+By default, Jupyter Bokk will only build the HTML for pages that have been updated since the last time you build the book. To signal a full re-build, use `--all` option:
+```
+```
+jupyter-book build --all mybookname/
 ```
 
 ##### *Step 4.* Publish book on line
 The book will be published on GitHub pages, a free online hosting platform.
 https://jupyterbook.org/start/publish.html
 
-###### For the first time
+*For the first time*
 1. Create a new repository on Github https://github.com/new
 ```{note}
 Make the repository public and do not initialize it with a README file.
 ```
 2. Close the (currently empty) online repository to your local computer.
 
-###### Whenever making changes to the content
+*Whenever making changes to the content*
 ```
 git clone https://github.com/<my-org>/<my-repository-name>
 ```
