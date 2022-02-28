@@ -5,7 +5,8 @@ format: jb-book
 root: intro
 
 
-chapter:
-- file: Online Event Operation Analysis
-- file: wrangle_act
-- file: Credit Worthiness Analysis
+chapters:
+    - file: Online Event Operation Analysis
+    - file: wrangle_act
+    - file: Credit Worthiness Analysis
+    - file: Portfolio with Jupyter book
