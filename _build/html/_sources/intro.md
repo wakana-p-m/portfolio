@@ -9,4 +9,4 @@ I have 13-plus years of experience in digital and traditional marketing. I am a 
 Do you remember the movie [Moneyball](https://www.imdb.com/title/tt1210166/) starring Brad Pitt? Nowadays, using data for sport is very normal, but Oakland A's general manager Billy Beane pioneered it. The movie taught me *"Data Win"*. You may not have enough budgets or 6-figure star employees. But if you can empower the team to use data to make better decisions, your odds of winning the competition would increase. That's what I do and am passionate about.
 
 
-*Empowering marketers to make data-driven strategic and creative decisions.*
+🌈 *Empowering marketers to make data-driven strategic and creative decisions.* ✨

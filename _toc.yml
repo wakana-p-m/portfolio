@@ -3,7 +3,10 @@
 
 format: jb-book
 root: intro
+parts:
+- caption: projects
 chapters:
 - file: Online Event Operation Analysis
 - file: wrangle_act
+- file: Credit Worthiness Analysis
 
