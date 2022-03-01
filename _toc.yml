@@ -9,6 +9,7 @@ parts:
 - caption: projects
   chapters:
     - file: Online Event Operation Analysis
+    - file: Projects\Social Media Content Analysis\New Post & Content Performance Data Visualization
     - file: Credit Worthiness Analysis
     - file: WeRateDogs Twitter Analysis
 - caption: Tutorials
