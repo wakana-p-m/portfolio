@@ -9,7 +9,7 @@ parts:
 - caption: projects
   chapters:
     - file: Online Event Operation Analysis
-  #  - file: social_media
+    - file: social_media
     - file: Credit Worthiness Analysis
     - file: WeRateDogs Twitter Analysis
 - caption: Tutorials

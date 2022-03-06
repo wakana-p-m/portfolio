@@ -3,25 +3,19 @@
 
 # # Social Media Content Analysis
 # 
-# I analyzed the performance of different content categories on social media platforms to identify the most optimal social media platform to communicate the company's value propositions. Also, I generated data visualization so that creative team members intuitively understand which categories are performing or not performing. 
+# I analyzed the performance of social media posts by content categories and social media platforms (Facebook, Instagram, Twitter, and LinkedIn) to identify the most optimal platform to communicate a company's value propositions. 
 # 
-# The analysis relived that the posts about core values are not as many as other content categories, and their performance was the worst. This result led me to shift the strategic marketing plan to focus more on internal brand training so that team members understand the value propositions from the first place. 
-# 
-# *This project was a good example of how analysis can influence strategic marketing planning and help a marketing team's day-to-day channel performance.*
+# The analysis relived that not only the posts about the company's core values were underperforming compared to other content categories but also the value of posts the core values was much smaller. This result led me to focus on reinforcing the brand messaging as one of the strategic plans. 
 
 # ## Background
-# An higher education instition that I worked for (Let's say "ABC University") has 6 core values; **faculty, curriculum, career opportunity**, location, diversity, alumni network. (The first three values are the key values.) Our social media team's goal was to communicate these core values in engaging way while maximing the exposure (=impression). In order to acquire high impressions, make the posts highly engaging is essentioal but these core values are not necessarily "fun" topics to discuss.
+# My social media team's goal was to communicate the company's value propositions in engaging ways while maximizing the exposure (=impressions) of individual posts. In order to acquire high impressions (due to most of the social media's algorithms), constantly posting highly engaging content is essential. However, the company's core values are not necessarily "fun" topics to discuss, and it's tempting to just post engagement-driven posts such as memes and pretty images.
 # 
-# The social media team used to post the same content across 4 major social media channels (Facebook, LinkedIn, Instagram, and Twitter) or occationally posted different content on paricular channel, but these creative deicison was not based on any data or assumtion. 
-# 
-# *This project was a good example of how analysis can influence strategic marketing planning and help a marketing team's day-to-day channel performance.*
+# The social media team used to post the exact same content across 4 major social media channels (Facebook, LinkedIn, Instagram, and Twitter). However, as each platform has a different audience, it is required to create content that caters to each platform.
 # 
 # 
 # ## Objective
-# Identify the most optimal platform(s) for each core value. Make the creative deicision.
+# Identify the most optimal platform(s) for each core value. 
 # 
-# ## Audience
-# Social media team
 # 
 # ## Measure of Success
 # 
@@ -30,25 +24,42 @@
 # - The number of impression *– This indicate how much a single social media post is shown on user's timeline. This is usually used as an indirect measure of brand awareness*
 # 
 # ## Data Source
-# - The raw data of social media posts that published between past 12 months (January 1, 2020, December 21, 2020) were exported from a social media management platform, Sprout Social as `.csv`.
-# - In addition to the 6 core values, a few content category tags are also used. 
-# - For confidentiacility, a part of original data is hidden in this report
+# The raw data of social media posts published between the past 12 months (January 1, 2020, December 21, 2020) were exported from a social media management platform, Sprout Social as `.csv`.
 # 
+# Each post has a few tags representing the content categories and subcategories. Content categories are consist of company's core values, values, and social media-specific content categories (such as memes, or user generated content). Subcategories are used to label campaigns, experimental posts, and types of products.
+# 
+# For confidentiality, any information that can identify the company was scraped out for this case study. Content categories and subcategories are modified as below:
+# 
+# - Company's core values: core value 1, core value 2, core value 3
+# - Company's values: value, 4, value 5, value 6
+# - Social media specific categories: corgi, husky
+# - Subcategories: Pokemon names
+# 
+# 
+# ## Results
+# - All three core values (core value 1, core value 2, core value 3) were not performing well across the platforms. Also, the number of posts about these core values is fewer than the other categories. 
+# - The number of posts is heavily skewed to the "value 4" category on social media, and the category is performing well. 
+# - The "value 5" content generates the highest engagement on LinkedIn while the category does not perform as much on other platforms. 
+# - The "value 6" content performs well on all channels except Facebook. 
+#  - The engagement of the "value 4" category on Facebook is higher than other content categories. However, the impression is not necessarily higher, which implies there might not be a strong correlation between post engagements and impression on Facebook.
+#  
 # ## Insights
-# - All of three key values (faculty, curriculum, and career opporunity) were the worst performing content across the platforms.
-# - The number of post is heavly skewed to "student work" category on social meida and the category is performing well. However, the post about core values are very little.
-# - The engagement of "student work" category on Facebook is significantly higher than other content categories. However, the impression is not necessarily higher. This implies there might not be a strong correlation between post engagements and impression on Facebook.
+# Core values are not necessarily easy topics to cover on social media and making the topic engaging requires creativity. My assumption was the team did not fully understand the company's values and how to talk about them. That's why they tried to avoid the topic. Instead, they posted value 4 content because it's an "easy win". 
 # 
 # 
 # ## Action items
-# - As the low performance of content about the three key core values are critical issue, I conducted an internal brand training to educate the team members about the company's value proposition. 
-# - Explore new ways to improve Facebook's organic impression since there is little correlation between post engagements and impression. The basic strategy for social media is to improve engagement, which also help organic impression, but Facebook needs a different strategy.
+# - As the low performance of content about the three core values is a critical issue, reinforce the brand messaging to communicate core values by providing the social media team with brand training.
+# - Continue to produce the "value 4" content as it helps maintain the social media accounts' engagement.
+# - Post more of the "value 5" content on LinkedIn.
+# - Reduce the amount of the "value 6" content on Facebook. 
+# - Explore new ways to improve Facebook's organic impression since there is little correlation between post engagements and impressions. The basic strategy for social media is to improve engagement, which also helps organic impressions, but Facebook needs a different strategy.
 # 
 # 
 # ## Limitation and future project
-# Social media team had to manually tag the content type, which was extremly time consuing. Also, tagging can be subjective without a clear guideline. This process can be improved by using NLP.
+# The social media team had to manually tag the content type, which was extremely time-consuming. Also, tagging can be subjective without a clear guideline. This process could be improved by using NLP.
 
 # In[1]:
+
 
 
 import pandas as pd
@@ -59,19 +70,14 @@ pd.set_option('display.max_columns', 999) #This option force Jupyternotebook to 
 # In[2]:
 
 
-cols_to_use =['Date', 'Post ID', 'Network','Post Type','Link', 'Impressions',
+cols_to_use =['Date', 'Post ID', 'Network','Post Type','Impressions',
        'Organic Impressions', 'Engagement Rate (per Impression)',
        'Engagements', 'Reactions', 'Comments',
        'Shares','Tags']
+post_raw = pd.read_csv('Projects/Social Media Content Analysis/modifiled_post_performance_data.csv', parse_dates=['Date'], usecols=cols_to_use)
 
 
 # In[3]:
-
-
-post_raw = pd.read_csv('Post Performance (Academy of Art University) January 1, 2020 - December 31, 2020.csv', parse_dates=['Date'], usecols=cols_to_use)
-
-
-# In[5]:
 
 
 #Pull only "Post" type data
@@ -81,19 +87,19 @@ post_raw = post_raw[post_type_to_keep]
 post_raw = post_raw.fillna(0)
 
 
-# In[5]:
+# In[4]:
 
 
 post_raw.head(5)
 
 
-# In[6]:
+# In[5]:
 
 
 post_raw.info()
 
 
-# In[7]:
+# In[6]:
 
 
 # A function to change dtype of engagement and impression to int64 if their dtype if object
@@ -117,7 +123,7 @@ def engagement_calculator(platform):
     platform.dropna(subset=data_to_check, inplace=True)
 
 
-# In[8]:
+# In[7]:
 
 
 #A function to clean data by network except facebook
@@ -134,7 +140,7 @@ def clean_data_by_network(network, data):
     
 
 
-# In[9]:
+# In[8]:
 
 
 #A function to clean facebook data
@@ -171,7 +177,7 @@ def clean_facebook_data(data):
     
 
 
-# In[52]:
+# In[9]:
 
 
 facebook_cleaned = clean_facebook_data(post_raw).copy()
@@ -180,7 +186,7 @@ instagram_cleaned = clean_data_by_network('Instagram', post_raw ).copy()
 linkedin_cleaned = clean_data_by_network('LinkedIn', post_raw ).copy()
 
 
-# In[53]:
+# In[10]:
 
 
 #Concatinate the 4 differente DFs
@@ -191,29 +197,13 @@ all_data = pd.concat(Networks)
 all_data = all_data[['Date', 'Network', 'Impressions', 'Engagements', 'Engagement Rate', 'Post ID', 'Tags']]
 
 
-# In[15]:
+# In[11]:
 
 
 all_data.head()
 
 
-# In[54]:
-
-
-export_cols = ['Date', 'Network', 'Impressions', 'Engagements', 'Engagement Rate', 'Post ID']
-
-def export_for_tableau(data_period, data):
-    filename = f"Individual_post_performance_{data_period}.csv"
-    data.to_csv(filename, columns=export_cols)
-
-
-# In[55]:
-
-
-export_for_tableau('January 1, 2020 - December 31, 2020', all_data)
-
-
-# In[56]:
+# In[12]:
 
 
 all_data.info()
@@ -222,16 +212,7 @@ all_data.info()
 # ## Processing Tags
 # 
 
-# In[57]:
-
-
-#Replace "student artwork" with "student work" because in the mid of 2020, we changed the SproutSocial tagging rules
-
-all_data['Tags'] = all_data['Tags'].replace({'Student Artwork':'Student Work','alumni success':'success','Student success':'success','faculty success':'faculty'}, regex=True)
-all_data.head()
-
-
-# In[58]:
+# In[13]:
 
 
 import numpy as np
@@ -239,7 +220,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-# In[59]:
+# In[14]:
 
 
 #A main function to process tag strings
@@ -319,14 +300,14 @@ def process_tags(df):
  
 
 
-# In[60]:
+# In[15]:
 
 
 content_category_df = process_tags(all_data)
 content_category_df.head()
 
 
-# In[24]:
+# In[16]:
 
 
 def export_tag_report(data, MMYY):
@@ -334,7 +315,7 @@ def export_tag_report(data, MMYY):
     data.to_csv('filename')
 
 
-# In[25]:
+# In[17]:
 
 
 export_tag_report(content_category_df, "2020")
@@ -347,7 +328,7 @@ export_tag_report(content_category_df, "2020")
 # `instagram_cleaned`
 # `linkedin_cleaned`
 
-# In[26]:
+# In[18]:
 
 
 twitter = process_tags(twitter_cleaned)
@@ -356,79 +337,78 @@ instagram = process_tags(instagram_cleaned)
 linkedin = process_tags(linkedin_cleaned)
 
 
-# In[27]:
+# In[19]:
 
 
 twitter.describe()
 
 
 # ## Creating Subsettings for content types
-# - Primary category: Top content hierarchy
-#     `curriculum`, `success`,`awards & honors`, `partnership`, `academy cares`,`faculty`,`events`, `engagement`,`sf`, 
-#     `student artwork`
-# - Secondary category: Internal user only to collect data of spesific campaigns
-# - Department
-# 
-# 
 
-# In[28]:
+# In[20]:
 
 
 tags
 
 
-# In[61]:
+# In[21]:
 
 
-#Creating a list of primary content categories
-primary_content = ['curriculum', 'success','awards & honors', 'partnership', 'academy cares','faculty','events', 'engagement','sf', 'student work']
-
-#Creating a list of departments
-schools = ['act','adv','anm','arch','art edu','art history', 'athletics', 'com', 'fa', 'fsh','gam','gr','iad', 'ids','ill','jem','lan','mptv','mus','ph','vis', 'wnm','wri']
+#Creating a list of primary content (Value propositions + social media origianl categorids)
+primary_content= ['core value 1', 'value 4','value 5', 'core value 2','value 6','core value 3','corgi','husky','value 7', 'german shepherd']
 
 
-# In[62]:
+# In[22]:
+
+
+content_category_df["Category"].unique()
+
+
+# In[23]:
 
 
 #subsetting primary content category only
 performance_by_primary = content_category_df[content_category_df['Category'].isin(primary_content)]
-performance_by_primary.head()
+performance_by_primary
 
 
-# In[31]:
+# In[24]:
 
 
 #subsetting school only
-performance_by_school = content_category_df[content_category_df['Category'].isin(schools)]
-performance_by_school.head()
+#performance_by_school = content_category_df[content_category_df['Category'].isin(schools)]
+#performance_by_school.head()
 
 
-# In[32]:
+# In[25]:
 
 
 #subsetting other content type only
-criteria = ~content_category_df['Category'].isin(schools) | ~content_category_df['Category'].isin(performance_by_primary)
-performance_by_secondary = content_category_df[criteria]
-performance_by_secondary.head()
+#criteria = ~content_category_df['Category'].isin(schools) | ~content_category_df['Category'].isin(performance_by_primary)
+#performance_by_secondary = content_category_df[criteria]
+#performance_by_secondary.head()
 
 
 # ## Visualizayion: Primary Content Category
 
-# In[63]:
+# In[26]:
 
 
 from matplotlib import pyplot as plt
+get_ipython().run_line_magic('matplotlib', 'inline')
+
 import seaborn as sns
 
 
-# In[64]:
+# In[27]:
 
 
 #Create color pallet for each category
-colors = {'curriculum': 'red', 'success':'darkorange','awards & honors':'gold', 'partnership':'yellow', 'academy cares':'yellowgreen','faculty':'green','events':'teal', 'engagement':'skyblue','sf':'blue', 'student work':'pink'}
+
+colors = {'core value 1':'red', 'value 4':'darkorange','value 5':'gold', 'core value 2':'yellow', 'value 6':'yellowgreen', 'core value 3':'green','corgi':'teal','husky':'skyblue','value 7':'blue', 'german shepherd':'pink'}
 
 
-# In[65]:
+# In[28]:
 
 
 #aggregate the category performance using pivot_table
@@ -440,43 +420,9 @@ agg_perimary_category['color']= agg_perimary_category['Category'].apply(lambda x
 agg_perimary_category
 
 
-# ### Overall Performance
-
-# In[70]:
-
-
-fig1, ax1 = plt.subplots(2,2, figsize = (20,15), squeeze=False)
-fig1.subplots_adjust(hspace=0.4)
-
-# The total number of post
-g = sns.barplot(ax= ax1[0,0], 
-                data=agg_perimary_category, 
-                x= 'Category', 
-                y = 'Number of posts', 
-                palette=agg_perimary_category['color']
-               )
-g.set_xticklabels(g.get_xticklabels(),rotation=20)
-ax1[0,0].set_title('Total number of post')
-
-# Average impression
-g = sns.barplot(ax= ax1[0,1], data=agg_perimary_category, x= 'Category', y = 'Average Impression', palette=agg_perimary_category['color'])
-g.set_xticklabels(g.get_xticklabels(),rotation=20)
-ax1[0,1].set_title('Average impression')
-
-#Average Engagement 
-g = sns.barplot(ax= ax1[1,0], data=agg_perimary_category, x= 'Category', y = 'Average Engagement', palette=agg_perimary_category['color'])
-g.set_xticklabels(g.get_xticklabels(),rotation=20)
-ax1[1,0].set_title('Average Engagement')
-
-#Average Engagement rate
-g = sns.barplot(ax= ax1[1,1], data=agg_perimary_category, x= 'Category', y = 'Engagement Rate', palette=agg_perimary_category['color'])
-g.set_xticklabels(g.get_xticklabels(),rotation=20)
-ax1[1,1].set_title('Median Engagement Rate');
-
-
 # ### Performance by Platform
 
-# In[71]:
+# In[29]:
 
 
 twitter_primary = twitter[twitter['Category'].isin(primary_content)].reset_index(drop=True)
@@ -492,13 +438,13 @@ linkedin_primary = linkedin[linkedin['Category'].isin(primary_content)].reset_in
 linkedin_primary['color']=linkedin_primary['Category'].apply(lambda x: colors[x])
 
 
-# In[49]:
+# In[30]:
 
 
 twitter_primary
 
 
-# In[72]:
+# In[31]:
 
 
 fig, axes = plt.subplots(2,2, figsize = (18,10))
@@ -528,7 +474,7 @@ g.set_xticklabels(g.get_xticklabels(),rotation=20)
 axes[1,1].set_title('LinkedIn');
 
 
-# In[77]:
+# In[32]:
 
 
 #the number of post
@@ -560,7 +506,7 @@ g.set_xticklabels(g.get_xticklabels(),rotation=20)
 axes2[1,1].set_title('LinkedIn');
 
 
-# In[78]:
+# In[33]:
 
 
 #Median impression
@@ -591,7 +537,7 @@ g.set_xticklabels(g.get_xticklabels(),rotation=20)
 axes3[1,1].set_title('LinkedIn');
 
 
-# In[42]:
+# In[34]:
 
 
 #Median engagement
@@ -625,7 +571,7 @@ axes4[1,1].set_title('LinkedIn');
 
 # ### Twitter
 
-# In[79]:
+# In[35]:
 
 
 fig, axes_t = plt.subplots(2,2, figsize = (18,10))
@@ -659,7 +605,7 @@ axes_t[1,1].set_title('Average Engagement');
 
 # ## Facebook
 
-# In[44]:
+# In[36]:
 
 
 fig, axes_f = plt.subplots(2,2, figsize = (18,10))
@@ -693,7 +639,7 @@ axes_f[1,1].set_title('Average Engagement');
 
 # ## Instagram
 
-# In[80]:
+# In[37]:
 
 
 fig, axes_i = plt.subplots(2,2, figsize = (18,10))
@@ -727,7 +673,7 @@ axes_i[1,1].set_title('Average Engagement');
 
 # ## LinkedIn
 
-# In[81]:
+# In[38]:
 
 
 fig, axes_l = plt.subplots(2,2, figsize = (18,10))
@@ -757,6 +703,12 @@ axes_l[1,0].set_title('Engagement Rate')
 g = sns.barplot(ax= axes_l[1,1], data=linkedin_primary, x= 'Category', y = 'Average Engagement', palette=linkedin_primary['color'])
 g.set_xticklabels(g.get_xticklabels(),rotation=20)
 axes_l[1,1].set_title('Average Engagement');
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
