@@ -9,6 +9,7 @@ parts:
 - caption: projects
   chapters:
     - file: Online Event Operation Analysis
+    - file: Paid Social Ad Landing page AB Test
     - file: social_media
     - file: Credit Worthiness Analysis
     - file: WeRateDogs Twitter Analysis
