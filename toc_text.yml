@@ -19,6 +19,7 @@ root: intro
 
 chapters:
     - file: Online Event Operation Analysis
+    - file: Paid Social Ad Landing page AB Test
     - file: wrangle_act
     - file: Credit Worthiness Analysis
     - file: Portfolio with Jupyter book
