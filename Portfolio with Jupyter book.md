@@ -62,7 +62,7 @@ https://jupyterbook.org/start/publish.html
 ```{note}
 Make the repository public and do not initialize it with a README file.
 ```
-2. Close the (currently empty) online repository to your local computer.
+2. Clone the (currently empty) online repository to your local computer.
 
 *Whenever making changes to the content*
 ```
