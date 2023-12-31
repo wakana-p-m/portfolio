@@ -1,929 +1,490 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>WeRateDogs Twitter Analysis &#8212; Wakana Morlan Marketing Data Analyst</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'wrangle_act';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
-    <link rel="prev" title="Online Event Optimization 🎟️" href="Online%20Event%20Operation%20Analysis.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/Wakana.jpg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Wakana Morlan Marketing Data Analyst</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Konnichiwa! (“Hello!” in Japanese) 👋
-  </a>
- </li>
+    
+    
+    <img src="_static/Wakana.jpg" class="logo__image only-light" alt="Wakana Morlan Marketing Data Analyst - Home"/>
+    <script>document.write(`<img src="_static/Wakana.jpg" class="logo__image only-dark" alt="Wakana Morlan Marketing Data Analyst - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Konnichiwa! (“Hello!” in Japanese) 👋
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">projects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Online%20Event%20Operation%20Analysis.html">Online Event Optimization 🎟️</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Paid%20Social%20Ad%20Landing%20page%20AB%20Test.html">Paid Social A/B Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="social_media.html">Social Media Content Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credit%20Worthiness%20Analysis.html">Credit Worthiness Analysis</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="WeRateDogs%20Twitter%20Analysis.html">WeRateDogs Twitter Analysis</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Online%20Event%20Operation%20Analysis.html">
-   Online Event Optimization 🎟️
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   WeRateDogs Twitter Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Credit%20Worthiness%20Analysis.html">
-   Preparation
-  </a>
- </li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Portfolio%20with%20Jupyter%20book.html">Portfolio with Jupyter book</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/wrangle_act.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fwrangle_act.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fwrangle_act.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/wrangle_act.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/wrangle_act.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>WeRateDogs Twitter Analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analysis">
-   Analysis
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relationship-between-the-ratings-and-people-s-response-retweet-and-like">
-     Relationship between the ratings and people’s response (Retweet and Like)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relationship-between-the-ratings-and-the-god-stage">
-     Relationship between the ratings and the god stage
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relationship-between-the-ratings-and-god-breeds">
-     Relationship between the ratings and god breeds
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note">
-     Note
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gater">
-   Gater
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assess">
-   Assess
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enhanced-twitter-archive">
-     Enhanced Twitter Archive
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#image-predictions">
-     Image Predictions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-data-via-the-twitter-api">
-     Additional Data via the Twitter API
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quality-issues">
-     Quality issues
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#enhanced-twitter-archive-table">
-       Enhanced Twitter Archive table
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#image-predictions-table">
-       Image Predictions table
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#additional-data-via-the-twitter-api-table">
-       Additional Data via the Twitter API table
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tidiness-issues">
-     Tidiness issues
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#clean">
-   Clean
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#issue">
-     Issue
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define">
-     define
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code">
-     Code
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#test">
-     Test
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Issue
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Define
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Code
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
-       Code
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id11">
-       Code
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id13">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id15">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id16">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id17">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id18">
-       Code
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id19">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id20">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id21">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id22">
-       Test
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tidiness">
-     Tidiness
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id23">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id24">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id25">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id26">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id27">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id28">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id29">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id30">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id31">
-       Test
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-clean-dataframes">
-     Save the clean DataFrames
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id32">
-   Analysis
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#retweets">
-     Retweets
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#likes">
-       Likes
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#relationship-between-retweets-and-likes">
-       Relationship between retweets and likes
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dog-stage">
-       Dog Stage
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#insights">
-     Insights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dog-breed">
-     Dog breed
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#insight">
-     Insight
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-the-ratings-and-people-s-response-retweet-and-like">Relationship between the ratings and people’s response (Retweet and Like)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-the-ratings-and-the-god-stage">Relationship between the ratings and the god stage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-the-ratings-and-god-breeds">Relationship between the ratings and god breeds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gater">Gater</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assess">Assess</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-twitter-archive">Enhanced Twitter Archive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-predictions">Image Predictions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-data-via-the-twitter-api">Additional Data via the Twitter API</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-issues">Quality issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-twitter-archive-table">Enhanced Twitter Archive table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#image-predictions-table">Image Predictions table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-data-via-the-twitter-api-table">Additional Data via the Twitter API table</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidiness-issues">Tidiness issues</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clean">Clean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue">Issue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define">define</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test">Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Issue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Define</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Test</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidiness">Tidiness</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Test</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-the-clean-dataframes">Save the clean DataFrames</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retweets">Retweets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#likes">Likes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-retweets-and-likes">Relationship between retweets and likes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dog-stage">Dog Stage</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insights">Insights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dog-breed">Dog breed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insight">Insight</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>WeRateDogs Twitter Analysis</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analysis">
-   Analysis
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relationship-between-the-ratings-and-people-s-response-retweet-and-like">
-     Relationship between the ratings and people’s response (Retweet and Like)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relationship-between-the-ratings-and-the-god-stage">
-     Relationship between the ratings and the god stage
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relationship-between-the-ratings-and-god-breeds">
-     Relationship between the ratings and god breeds
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note">
-     Note
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gater">
-   Gater
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assess">
-   Assess
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enhanced-twitter-archive">
-     Enhanced Twitter Archive
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#image-predictions">
-     Image Predictions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-data-via-the-twitter-api">
-     Additional Data via the Twitter API
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quality-issues">
-     Quality issues
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#enhanced-twitter-archive-table">
-       Enhanced Twitter Archive table
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#image-predictions-table">
-       Image Predictions table
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#additional-data-via-the-twitter-api-table">
-       Additional Data via the Twitter API table
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tidiness-issues">
-     Tidiness issues
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#clean">
-   Clean
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#issue">
-     Issue
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define">
-     define
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code">
-     Code
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#test">
-     Test
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Issue
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Define
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Code
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
-       Code
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id11">
-       Code
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id13">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id15">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id16">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id17">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id18">
-       Code
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id19">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id20">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id21">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id22">
-       Test
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tidiness">
-     Tidiness
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id23">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id24">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id25">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id26">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id27">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id28">
-       Test
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id29">
-       Issue
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id30">
-       Define
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id31">
-       Test
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-clean-dataframes">
-     Save the clean DataFrames
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id32">
-   Analysis
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#retweets">
-     Retweets
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#likes">
-       Likes
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#relationship-between-retweets-and-likes">
-       Relationship between retweets and likes
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dog-stage">
-       Dog Stage
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#insights">
-     Insights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dog-breed">
-     Dog breed
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#insight">
-     Insight
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="weratedogs-twitter-analysis">
-<h1>WeRateDogs Twitter Analysis<a class="headerlink" href="#weratedogs-twitter-analysis" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="weratedogs-twitter-analysis">
+<h1>WeRateDogs Twitter Analysis<a class="headerlink" href="#weratedogs-twitter-analysis" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In this project, we will analyze a popular Twitter account <span class="xref myst">&#64;dog_rates</span>, also known as WeRateDogs. WeRateDogs rates people’s dogs with a humorous comment about the dog. These ratings almost always have a denominator of 10 and a numerator that greater than 10, such as as11/10, 12/10, 13/10, etc. People love WeRateDogs’s tweets because of this fun rating system!</p>
 <p>Through this analysis, we will find out the relationship between WeRateDog’s rating and people’s reactions; likes and retweets. Does a higher rating bring more like or retweet? Let’s find out!</p>
 <p>Also, we will find out the popular dog breed by the number of retweets and likes to find out internet users’ favorite dog breeds.</p>
 <p><img alt="weratedogs" src="_images/WeRateDogs_Twitter.png" /></p>
-</div>
-<div class="section" id="analysis">
-<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="analysis">
+<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h2>
 <p>We are going to analyze:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Relationship between the ratings and people’s response (Retweet and Like)</p></li>
 <li><p>Relationship between the ratings and the god stage</p></li>
 <li><p>Relationship between the ratings and god breeds</p></li>
 </ol>
-<div class="section" id="relationship-between-the-ratings-and-people-s-response-retweet-and-like">
-<h3>Relationship between the ratings and people’s response (Retweet and Like)<a class="headerlink" href="#relationship-between-the-ratings-and-people-s-response-retweet-and-like" title="Permalink to this headline">¶</a></h3>
+<section id="relationship-between-the-ratings-and-people-s-response-retweet-and-like">
+<h3>Relationship between the ratings and people’s response (Retweet and Like)<a class="headerlink" href="#relationship-between-the-ratings-and-people-s-response-retweet-and-like" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>The dog rating and the number of retweets and the number of likes have a positive relationship. i.e. the higher the rating is, the more retweets and likes the account gets.</p>
 </div></blockquote>
@@ -934,15 +495,15 @@
 <div><p>Interestingly, these extrez
 mely high ratings do not affect the user’s response.  Also, the rating of 13/10 is most likely to get many retweets and likes.  The number of retweets and likes are a positive relationship. The more retweets a tweet gets, the more like the tweet gets, and vise visa.  This makes sense as a tweet is retweeted or liked, there is a higher chance to be seen by many other users.</p>
 </div></blockquote>
-</div>
-<div class="section" id="relationship-between-the-ratings-and-the-god-stage">
-<h3>Relationship between the ratings and the god stage<a class="headerlink" href="#relationship-between-the-ratings-and-the-god-stage" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="relationship-between-the-ratings-and-the-god-stage">
+<h3>Relationship between the ratings and the god stage<a class="headerlink" href="#relationship-between-the-ratings-and-the-god-stage" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>Dog stage does not so much affect the rating but dogs in ‘puppo’ stage get slightly higher ratings</p>
 </div></blockquote>
-</div>
-<div class="section" id="relationship-between-the-ratings-and-god-breeds">
-<h3>Relationship between the ratings and god breeds<a class="headerlink" href="#relationship-between-the-ratings-and-god-breeds" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="relationship-between-the-ratings-and-god-breeds">
+<h3>Relationship between the ratings and god breeds<a class="headerlink" href="#relationship-between-the-ratings-and-god-breeds" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>The most frequently posted dog breeds are Golden retriever, Pembroke, and Labrador retriever. The most highly rated dog breeds by WeRateDogs are Samoyed, Chow, Golden retriever.
 From these results, we can tell that WeRateDogs have a tendency to post Golden retriever because WeRateDogs personally like Golden retriever. As this twitter account is so popular, I expect WeRateDogs receives a lot of submission from users and WeRateDogs prescreens based on their preference. If you want to be featured on WeRateDogs account, sending Golden retriever’s picture might be a good idea.</p>
@@ -950,17 +511,17 @@ From these results, we can tell that WeRateDogs have a tendency to post Golden r
 <blockquote>
 <div><p>On the other hand, the most retweeted dog breeds are Labrador retriever, French Bulldog, and Samoyed and the most liked dog breeds are French bulldog, Labrador retriever, and Samoyed. The followers of WeRateDogs like French Bulldogs and Samoyed. If you want your dog picture to be seen by many Twitter users, sending French Bulldog and Samoyed might be a good idea.</p>
 </div></blockquote>
-</div>
-<div class="section" id="note">
-<h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="note">
+<h3>Note<a class="headerlink" href="#note" title="Permalink to this heading">#</a></h3>
 <p>I extracted image prediction data with more than 70% of confidence rate to enhance the accuracy of the analysis. Also, I selected the 10 most frequently posted dog breeds for this analysis.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="gater">
-<h2>Gater<a class="headerlink" href="#gater" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="gater">
+<h2>Gater<a class="headerlink" href="#gater" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import necessary libraries</span>
@@ -974,7 +535,7 @@ From these results, we can tell that WeRateDogs have a tendency to post Golden r
 </div>
 </div>
 <p>First, we need to collect 3 types of data below:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">twitter-archive-enhanced.csv</span></code> : The WeRateDogs Twitter archive provided by Udacity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image_predictions.tsv</span></code> : The tweet image predictions, i.e., what breed of dog (or other object, animal, etc.) is present in each tweet according to a neural network. This data is hosted on Udacity’s servers. This can be donwloaded from <a class="reference external" href="https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv">here</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tweet_json.txt</span></code> : Tweet’s JSON data containing retweet count, favorite count, and tweet ID etc.</p></li>
@@ -1087,9 +648,9 @@ From these results, we can tell that WeRateDogs have a tendency to post Golden r
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="assess">
-<h2>Assess<a class="headerlink" href="#assess" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="assess">
+<h2>Assess<a class="headerlink" href="#assess" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Change the number of columns to be displayed to assess all of the columns</span>
@@ -1098,8 +659,8 @@ From these results, we can tell that WeRateDogs have a tendency to post Golden r
 </div>
 </div>
 </div>
-<div class="section" id="enhanced-twitter-archive">
-<h3>Enhanced Twitter Archive<a class="headerlink" href="#enhanced-twitter-archive" title="Permalink to this headline">¶</a></h3>
+<section id="enhanced-twitter-archive">
+<h3>Enhanced Twitter Archive<a class="headerlink" href="#enhanced-twitter-archive" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tw_archive</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1426,9 +987,9 @@ memory usage: 313.0+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="image-predictions">
-<h3>Image Predictions<a class="headerlink" href="#image-predictions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="image-predictions">
+<h3>Image Predictions<a class="headerlink" href="#image-predictions" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_predict</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -1663,9 +1224,9 @@ memory usage: 152.1+ KB
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="additional-data-via-the-twitter-api">
-<h3>Additional Data via the Twitter API<a class="headerlink" href="#additional-data-via-the-twitter-api" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="additional-data-via-the-twitter-api">
+<h3>Additional Data via the Twitter API<a class="headerlink" href="#additional-data-via-the-twitter-api" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jason_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -3901,11 +3462,16 @@ memory usage: 111.9 KB
 </div></div></div>
 </div>
 <div class="cell tag_hide-output docutils container">
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_performance</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;favorite_count == 0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">unique</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Series.unique of 31      886054160059072513
 35      885311592912609280
@@ -3972,46 +3538,47 @@ Name: id, Length: 166, dtype: int64&gt;
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-<div class="section" id="quality-issues">
-<h3>Quality issues<a class="headerlink" href="#quality-issues" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="enhanced-twitter-archive-table">
-<h4>Enhanced Twitter Archive table<a class="headerlink" href="#enhanced-twitter-archive-table" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="quality-issues">
+<h3>Quality issues<a class="headerlink" href="#quality-issues" title="Permalink to this heading">#</a></h3>
+<section id="enhanced-twitter-archive-table">
+<h4>Enhanced Twitter Archive table<a class="headerlink" href="#enhanced-twitter-archive-table" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>There are some invalid rating: the numerator and denominator values are wrong</p></li>
 <li><p>Timestamp is a wrong datatype: Object</p></li>
 </ul>
-</div>
-<div class="section" id="image-predictions-table">
-<h4>Image Predictions table<a class="headerlink" href="#image-predictions-table" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="image-predictions-table">
+<h4>Image Predictions table<a class="headerlink" href="#image-predictions-table" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Some images are not a dog - We only want to analyze dog data</p></li>
 <li><p>Not all predictions are accurate: The predictions in p1 show the predictions with the highest accuracy level among 3 image predictions</p></li>
 <li><p>Dog names in image predictions contain underscores between words</p></li>
 </ul>
-</div>
-<div class="section" id="additional-data-via-the-twitter-api-table">
-<h4>Additional Data via the Twitter API table<a class="headerlink" href="#additional-data-via-the-twitter-api-table" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="additional-data-via-the-twitter-api-table">
+<h4>Additional Data via the Twitter API table<a class="headerlink" href="#additional-data-via-the-twitter-api-table" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Replies, quoted retweets, and retweets are included in the tweet data. We want to analyze the dog rating tweet only.</p></li>
 <li><p>Some tweets got only 1 retweet and 0 favorite, which is not likely to happen to such a famous twitter account. - Maybe cause they are retweet or favorite for non-dog rating tweets.</p></li>
 <li><p>The description of individual tweet IDs are different from other data: ‘id’ need to align with <code class="docutils literal notranslate"><span class="pre">tweet_id</span></code> which are used in other 2 data.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="tidiness-issues">
-<h3>Tidiness issues<a class="headerlink" href="#tidiness-issues" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="tidiness-issues">
+<h3>Tidiness issues<a class="headerlink" href="#tidiness-issues" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Take out only the necessary columns</p></li>
 <li><p>dog “stage” should be in one column</p></li>
 <li><p>Retweets and favorite count data should be included in the enhanced Twitter Archive table</p></li>
 <li><p>Image prediction data should be included in the enhanced Twitter Archive table</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="clean">
-<h2>Clean<a class="headerlink" href="#clean" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="clean">
+<h2>Clean<a class="headerlink" href="#clean" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#create copies of each data</span>
@@ -4022,19 +3589,19 @@ Name: id, Length: 166, dtype: int64&gt;
 </div>
 </div>
 </div>
-<div class="section" id="issue">
-<h3>Issue<a class="headerlink" href="#issue" title="Permalink to this headline">¶</a></h3>
+<section id="issue">
+<h3>Issue<a class="headerlink" href="#issue" title="Permalink to this heading">#</a></h3>
 <p>There are some invalid rating: the numerator and denominator values are wrong.</p>
-</div>
-<div class="section" id="define">
-<h3>define<a class="headerlink" href="#define" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="define">
+<h3>define<a class="headerlink" href="#define" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Drop 0 values from <code class="docutils literal notranslate"><span class="pre">rating_numerator</span></code>.</p></li>
 <li><p>Drop value other than 10 from <code class="docutils literal notranslate"><span class="pre">rating_denominator</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="code">
-<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="code">
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tw_archive_clean</span> <span class="o">=</span> <span class="n">tw_archive_clean</span><span class="p">[</span><span class="n">tw_archive_clean</span><span class="o">.</span><span class="n">rating_numerator</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
@@ -4043,9 +3610,9 @@ Name: id, Length: 166, dtype: int64&gt;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="test">
-<h3>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="test">
+<h3>Test<a class="headerlink" href="#test" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tw_archive_clean</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -4165,18 +3732,18 @@ Name: id, Length: 166, dtype: int64&gt;
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="id1">
-<h3>Issue<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id1">
+<h3>Issue<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Timestamp is a wrong datatype: Object</p>
-</div>
-<div class="section" id="id2">
-<h3>Define<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Define<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Change datatype of ‘timestamp’ to time stamp using <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html">pandas-to_datetime</a></p></li>
 </ul>
-<div class="section" id="id3">
-<h4>Code<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<section id="id3">
+<h4>Code<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tw_archive_clean</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">tw_archive_clean</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
@@ -4184,9 +3751,9 @@ Name: id, Length: 166, dtype: int64&gt;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id4">
-<h4>Test<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id4">
+<h4>Test<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tw_archive_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -4221,11 +3788,16 @@ memory usage: 327.8+ KB
 </div>
 </div>
 <div class="cell tag_hide-output docutils container">
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tw_archive_clean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -4368,18 +3940,19 @@ memory usage: 327.8+ KB
   </tbody>
 </table>
 </div></div></div>
+</details>
 </div>
-</div>
-<div class="section" id="id5">
-<h4>Issue<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id5">
+<h4>Issue<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <p>Some images are not a god - We only want to analyze dog data</p>
-</div>
-<div class="section" id="id6">
-<h4>Define<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id6">
+<h4>Define<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
 <p>Drop the rows that <code class="docutils literal notranslate"><span class="pre">p1_dog</span></code>  is False</p>
-</div>
-<div class="section" id="id7">
-<h4>Code<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id7">
+<h4>Code<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_predict_clean</span><span class="p">[</span><span class="s1">&#39;p1_dog&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">image_predict_clean</span><span class="p">[</span><span class="n">image_predict_clean</span><span class="o">.</span><span class="n">p1_dog</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
@@ -4387,9 +3960,9 @@ memory usage: 327.8+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id8">
-<h4>Test<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id8">
+<h4>Test<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_predict_clean</span><span class="p">[</span><span class="n">image_predict_clean</span><span class="o">.</span><span class="n">p1_dog</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span><span class="o">.</span><span class="n">p1_dog</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -4402,20 +3975,20 @@ memory usage: 327.8+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id9">
-<h4>Issue<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id9">
+<h4>Issue<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
 <p>Not all predictions are accurate: The predictions in p1 show the predictions with the highest accuracy level among 3 image predictions</p>
-</div>
-<div class="section" id="id10">
-<h4>Define<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id10">
+<h4>Define<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Compare the values in <code class="docutils literal notranslate"><span class="pre">p1_conf</span></code>, <code class="docutils literal notranslate"><span class="pre">p2_conf</span></code> and <code class="docutils literal notranslate"><span class="pre">p3_conf</span></code> to make sure that <code class="docutils literal notranslate"><span class="pre">p1_conf</span></code> is the highest accuracy level.</p></li>
 <li><p>Drop <code class="docutils literal notranslate"><span class="pre">p2_conf</span></code> and <code class="docutils literal notranslate"><span class="pre">p3_conf</span></code> colums</p></li>
 </ul>
-</div>
-<div class="section" id="id11">
-<h4>Code<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id11">
+<h4>Code<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">image_predict_clean</span><span class="p">[</span><span class="s1">&#39;p1_conf&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">image_predict_clean</span><span class="p">[</span><span class="s1">&#39;p2_conf&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -4459,9 +4032,9 @@ memory usage: 327.8+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id12">
-<h4>Test<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id12">
+<h4>Test<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_predict_clean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -4545,13 +4118,13 @@ memory usage: 327.8+ KB
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="id13">
-<h4>Issue<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id13">
+<h4>Issue<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h4>
 <p>Dog names in image predictions contain underscores between words.</p>
-</div>
-<div class="section" id="id14">
-<h4>Define<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id14">
+<h4>Define<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
 <p>Replace understores in <code class="docutils literal notranslate"><span class="pre">p1</span></code> with whitespaces.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4560,15 +4133,20 @@ memory usage: 327.8+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id15">
-<h4>Test<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id15">
+<h4>Test<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
 <div class="cell tag_hide-output docutils container">
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_predict_clean</span><span class="o">.</span><span class="n">p1</span><span class="o">.</span><span class="n">unique</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Series.unique of 0            Welsh springer spaniel
 1                           redbone
@@ -4635,23 +4213,24 @@ Name: p1, Length: 2075, dtype: object&gt;
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-<div class="section" id="id16">
-<h4>Issue<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id16">
+<h4>Issue<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Replies, quoted retweets, and retweets are included in the tweet data. We want to analyze the dog rating tweet only.</p></li>
 <li><p>Some tweets got only 1 retweet and 0 favorite, which is not likely to happen to such a famous twitter account. - Maybe cause they are retweet or favorite for non-dog rating tweets.</p></li>
 </ul>
-</div>
-<div class="section" id="id17">
-<h4>Define<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id17">
+<h4>Define<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Drop rows that <code class="docutils literal notranslate"><span class="pre">in_reply_to_status_id</span></code> , <code class="docutils literal notranslate"><span class="pre">retweeted_status.id</span></code>, and <code class="docutils literal notranslate"><span class="pre">quoted_status_id</span></code> is not NaN</p></li>
 </ul>
-</div>
-<div class="section" id="id18">
-<h4>Code<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id18">
+<h4>Code<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nan_df</span> <span class="o">=</span> <span class="n">tweet_performance_clean</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">tweet_performance_clean</span><span class="p">[</span><span class="s1">&#39;in_reply_to_status_id&#39;</span><span class="p">])]</span>
@@ -4693,9 +4272,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id19">
-<h4>Test<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id19">
+<h4>Test<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nan_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -5088,13 +4667,13 @@ memory usage: 115.2 KB
 </div>
 <p>Since we removed all retweets, quoted retweets and replies, we no longer have tweets with 0 retweet or 1 favorite.</p>
 <p>I checked <a class="reference external" href="https://twitter.com/dog_rates/status/666102155909144576">the original tweet</a> with the minimum number of the retweet, and the number of retweets and favorites are 11 and 76 respectively, which matches with the description above.</p>
-</div>
-<div class="section" id="id20">
-<h4>Issue<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id20">
+<h4>Issue<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h4>
 <p>The description of individual tweet IDs are different from other data: ‘id’ need to align with tweet_id which are used in other 2 data.</p>
-</div>
-<div class="section" id="id21">
-<h4>Define<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id21">
+<h4>Define<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h4>
 <p>Rename the column <code class="docutils literal notranslate"><span class="pre">id</span></code> to <code class="docutils literal notranslate"><span class="pre">tweet_id</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5103,9 +4682,9 @@ memory usage: 115.2 KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id22">
-<h4>Test<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id22">
+<h4>Test<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nap_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -5195,16 +4774,16 @@ memory usage: 115.2 KB
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="tidiness">
-<h3>Tidiness<a class="headerlink" href="#tidiness" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id23">
-<h4>Issue<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="tidiness">
+<h3>Tidiness<a class="headerlink" href="#tidiness" title="Permalink to this heading">#</a></h3>
+<section id="id23">
+<h4>Issue<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h4>
 <p>Take out only the necessary columns</p>
-</div>
-<div class="section" id="id24">
-<h4>Define<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id24">
+<h4>Define<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Create a new DataFrame to store only necessary columns</p></li>
 </ul>
@@ -5281,9 +4860,9 @@ memory usage: 115.2 KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id25">
-<h4>Test<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id25">
+<h4>Test<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tw_archive_clean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -5417,13 +4996,13 @@ memory usage: 200.3+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id26">
-<h4>Issue<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id26">
+<h4>Issue<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h4>
 <p>The dog “stage” should be in one column</p>
-</div>
-<div class="section" id="id27">
-<h4>Define<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id27">
+<h4>Define<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Melt the <code class="docutils literal notranslate"><span class="pre">doggo</span></code>, <code class="docutils literal notranslate"><span class="pre">floofer</span></code>, <code class="docutils literal notranslate"><span class="pre">pupper</span></code>, and <code class="docutils literal notranslate"><span class="pre">puppo</span></code> columns to a <code class="docutils literal notranslate"><span class="pre">dog_stage</span></code> colum using <a class="reference external" href="https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.melt.html">pandas.melt</a> and store the data in <code class="docutils literal notranslate"><span class="pre">dog_stage</span></code></p></li>
 <li><p>Merge <code class="docutils literal notranslate"><span class="pre">dog_stage</span></code> with <code class="docutils literal notranslate"><span class="pre">tw_archive_clean</span></code></p></li>
@@ -5476,9 +5055,9 @@ memory usage: 200.3+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id28">
-<h4>Test<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id28">
+<h4>Test<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tw_archive_clean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -5596,16 +5175,16 @@ memory usage: 128.2+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id29">
-<h4>Issue<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id29">
+<h4>Issue<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Retweets and favorite count data should be included in the enhanced Twitter Archive table</p></li>
 <li><p>Image prediction data should be included in the enhanced Twitter Archive table</p></li>
 </ul>
-</div>
-<div class="section" id="id30">
-<h4>Define<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id30">
+<h4>Define<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Merge <code class="docutils literal notranslate"><span class="pre">tw_archive_clean</span></code> with <code class="docutils literal notranslate"><span class="pre">tweet_count</span></code> using <code class="docutils literal notranslate"><span class="pre">tweet_id</span></code> as a key. To remove retweets, quote retweets, and replies, use <code class="docutils literal notranslate"><span class="pre">inner</span></code> merge method.</p></li>
 <li><p>Merge <code class="docutils literal notranslate"><span class="pre">tw_archive_clean</span></code> with <code class="docutils literal notranslate"><span class="pre">image_predict_clean</span></code>  and <code class="docutils literal notranslate"><span class="pre">tweet_count</span></code> using <code class="docutils literal notranslate"><span class="pre">tweet_id</span></code> as a key. To remove retweets, quote retweets, and replies, use <code class="docutils literal notranslate"><span class="pre">inner</span></code> merge method.</p></li>
@@ -5625,9 +5204,9 @@ memory usage: 128.2+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id31">
-<h4>Test<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id31">
+<h4>Test<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_tweet_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -5848,10 +5427,10 @@ memory usage: 128.2+ KB
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="save-the-clean-dataframes">
-<h3>Save the clean DataFrames<a class="headerlink" href="#save-the-clean-dataframes" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="save-the-clean-dataframes">
+<h3>Save the clean DataFrames<a class="headerlink" href="#save-the-clean-dataframes" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_tweet_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;twitter_archive_master.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
@@ -5860,12 +5439,12 @@ memory usage: 128.2+ KB
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="id32">
-<h2>Analysis<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="id32">
+<h2>Analysis<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h2>
 <p>We are going to analyze:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Relationship between the ratings and people’s response (Retweet and Like)</p></li>
 <li><p>Relationship between the ratings and the god stage</p></li>
 <li><p>Relationship between the ratings and god breeds</p></li>
@@ -5988,11 +5567,11 @@ memory usage: 128.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/wrangle_act_118_0.png" src="_images/wrangle_act_118_0.png" />
+<img alt="_images/70f244ee7844de859d3e6eb9b28fd9ef763431ebb0820df5c1b92c89d2c09db1.png" src="_images/70f244ee7844de859d3e6eb9b28fd9ef763431ebb0820df5c1b92c89d2c09db1.png" />
 </div>
 </div>
-<div class="section" id="retweets">
-<h3>Retweets<a class="headerlink" href="#retweets" title="Permalink to this headline">¶</a></h3>
+<section id="retweets">
+<h3>Retweets<a class="headerlink" href="#retweets" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Remove outliers from the chart for better analysis</span>
@@ -6727,11 +6306,11 @@ memory usage: 128.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/wrangle_act_122_0.png" src="_images/wrangle_act_122_0.png" />
+<img alt="_images/8244faca23db19bcfd20aacea5eb3bc79e84bf6e501f1b04f88ac1ba5b23c094.png" src="_images/8244faca23db19bcfd20aacea5eb3bc79e84bf6e501f1b04f88ac1ba5b23c094.png" />
 </div>
 </div>
-<div class="section" id="likes">
-<h4>Likes<a class="headerlink" href="#likes" title="Permalink to this headline">¶</a></h4>
+<section id="likes">
+<h4>Likes<a class="headerlink" href="#likes" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">wo_outliers</span><span class="p">[</span><span class="s1">&#39;rating_numerator&#39;</span><span class="p">]</span>
@@ -6746,12 +6325,12 @@ memory usage: 128.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/wrangle_act_124_0.png" src="_images/wrangle_act_124_0.png" />
+<img alt="_images/b48996cd0441722ae62c7963f7ab789cb1351c4d7cc2b437e1443361b1a96167.png" src="_images/b48996cd0441722ae62c7963f7ab789cb1351c4d7cc2b437e1443361b1a96167.png" />
 </div>
 </div>
-</div>
-<div class="section" id="relationship-between-retweets-and-likes">
-<h4>Relationship between retweets and likes<a class="headerlink" href="#relationship-between-retweets-and-likes" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="relationship-between-retweets-and-likes">
+<h4>Relationship between retweets and likes<a class="headerlink" href="#relationship-between-retweets-and-likes" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">wo_outliers</span><span class="p">[</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">]</span>
@@ -6771,12 +6350,12 @@ memory usage: 128.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/wrangle_act_126_0.png" src="_images/wrangle_act_126_0.png" />
+<img alt="_images/ada36724792d027715d3d938d662a0e39a328f1efabe713eac9710235e6098c3.png" src="_images/ada36724792d027715d3d938d662a0e39a328f1efabe713eac9710235e6098c3.png" />
 </div>
 </div>
-</div>
-<div class="section" id="dog-stage">
-<h4>Dog Stage<a class="headerlink" href="#dog-stage" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="dog-stage">
+<h4>Dog Stage<a class="headerlink" href="#dog-stage" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_rating</span> <span class="o">=</span> <span class="n">wo_outliers</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rating_numerator</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -6853,13 +6432,13 @@ memory usage: 128.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/wrangle_act_130_0.png" src="_images/wrangle_act_130_0.png" />
+<img alt="_images/ce5007455fed17759680b3171898c040085ac25c485b95887a989278112aa186.png" src="_images/ce5007455fed17759680b3171898c040085ac25c485b95887a989278112aa186.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="insights">
-<h3>Insights<a class="headerlink" href="#insights" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="insights">
+<h3>Insights<a class="headerlink" href="#insights" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>The dog rating and the number of retweets and the number of likes have a positive relationship. i.e. the higher the rating is, the more retweets and likes the account gets.</p>
 </div></blockquote>
@@ -6872,9 +6451,9 @@ memory usage: 128.2+ KB
 <blockquote>
 <div><p>Dog stage does not so much affect the rating but dogs in ‘puppo’ stage get  slightly higher ratings</p>
 </div></blockquote>
-</div>
-<div class="section" id="dog-breed">
-<h3>Dog breed<a class="headerlink" href="#dog-breed" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="dog-breed">
+<h3>Dog breed<a class="headerlink" href="#dog-breed" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">images</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;image_predict_master.csv&#39;</span><span class="p">)</span>
@@ -7703,7 +7282,7 @@ memory usage: 128.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/wrangle_act_145_0.png" src="_images/wrangle_act_145_0.png" />
+<img alt="_images/66976015903ed54156db3c260161426d1da5ac3a5cf0caff5e186f9851ad47a6.png" src="_images/66976015903ed54156db3c260161426d1da5ac3a5cf0caff5e186f9851ad47a6.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -7840,7 +7419,7 @@ memory usage: 128.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/wrangle_act_147_0.png" src="_images/wrangle_act_147_0.png" />
+<img alt="_images/d2a02a33c45d158165f0f515293062136c8b4e68fb2bd40ea1cbaa7ce9be8d7f.png" src="_images/d2a02a33c45d158165f0f515293062136c8b4e68fb2bd40ea1cbaa7ce9be8d7f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -7858,12 +7437,12 @@ memory usage: 128.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/wrangle_act_148_0.png" src="_images/wrangle_act_148_0.png" />
+<img alt="_images/4993cffebd5cc06d7373e586ae78e88c9a0ce137c3986a8597319332298f9fba.png" src="_images/4993cffebd5cc06d7373e586ae78e88c9a0ce137c3986a8597319332298f9fba.png" />
 </div>
 </div>
-</div>
-<div class="section" id="insight">
-<h3>Insight<a class="headerlink" href="#insight" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="insight">
+<h3>Insight<a class="headerlink" href="#insight" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>The most frequently posted dog breeds are Golden retriever, Pembroke, and Labrador retriever. The most highly rated dog breeds by WeRateDogs are Samoyed, Chow, Golden retriever.
 From these results, we can tell that WeRateDogs have a tendency to post Golden retriever because WeRateDogs personally like Golden retriever. As this twitter account is so popular, I expect WeRateDogs receives a lot of submission from users and WeRateDogs prescreens based on their preference. If you want to be featured on WeRateDogs account, sending Golden retriever’s picture might be a good idea.</p>
@@ -7871,9 +7450,9 @@ From these results, we can tell that WeRateDogs have a tendency to post Golden r
 <blockquote>
 <div><p>On the other hand, the most retweeted dog breeds are Labrador retriever, French Bulldog, and Samoyed and the most liked dog breeds are French bulldog, Labrador retriever, and Samoyed. The followers of WeRateDogs like French Bulldogs and Samoyed. If you want your dog picture to be seen by many Twitter users, sending French Bulldog and Samoyed might be a good idea.</p>
 </div></blockquote>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -7887,7 +7466,7 @@ From these results, we can tell that WeRateDogs have a tendency to post Golden r
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -7895,44 +7474,161 @@ From these results, we can tell that WeRateDogs have a tendency to post Golden r
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-the-ratings-and-people-s-response-retweet-and-like">Relationship between the ratings and people’s response (Retweet and Like)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-the-ratings-and-the-god-stage">Relationship between the ratings and the god stage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-the-ratings-and-god-breeds">Relationship between the ratings and god breeds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gater">Gater</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assess">Assess</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-twitter-archive">Enhanced Twitter Archive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-predictions">Image Predictions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-data-via-the-twitter-api">Additional Data via the Twitter API</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-issues">Quality issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-twitter-archive-table">Enhanced Twitter Archive table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#image-predictions-table">Image Predictions table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-data-via-the-twitter-api-table">Additional Data via the Twitter API table</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidiness-issues">Tidiness issues</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clean">Clean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue">Issue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define">define</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test">Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Issue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Define</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Test</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidiness">Tidiness</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Test</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Issue</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Define</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Test</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-the-clean-dataframes">Save the clean DataFrames</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retweets">Retweets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#likes">Likes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-retweets-and-likes">Relationship between retweets and likes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dog-stage">Dog Stage</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insights">Insights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dog-breed">Dog breed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insight">Insight</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Online%20Event%20Operation%20Analysis.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Online Event Optimization 🎟️</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="markdown.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Wakana Morlan<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wakana Morlan
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022-2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
