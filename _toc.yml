@@ -6,8 +6,9 @@ format: jb-book
 defaults:
   numbered: False
 parts:
-- caption: projects
+- caption: Projects
   chapters:
+    - file: Google Travel Trend/Google Travel Trend Prediction
     - file: Online Event Operation Analysis
     - file: Paid Social Ad Landing page AB Test
     - file: social_media
