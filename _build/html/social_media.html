@@ -1,486 +1,440 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Social Media Content Analysis &#8212; Wakana Morlan Marketing Data Analyst</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'social_media';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Credit Worthiness Analysis" href="Credit%20Worthiness%20Analysis.html" />
-    <link rel="prev" title="Online Event Optimization 🎟️" href="Online%20Event%20Operation%20Analysis.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="prev" title="Paid Social A/B Testing" href="Paid%20Social%20Ad%20Landing%20page%20AB%20Test.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/Wakana.jpg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Wakana Morlan Marketing Data Analyst</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Konnichiwa! (“Hello!” in Japanese) 👋
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  projects
- </span>
-</p>
+    
+    
+    <img src="_static/Wakana.jpg" class="logo__image only-light" alt="Wakana Morlan Marketing Data Analyst - Home"/>
+    <script>document.write(`<img src="_static/Wakana.jpg" class="logo__image only-dark" alt="Wakana Morlan Marketing Data Analyst - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Konnichiwa! (“Hello!” in Japanese) 👋
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">projects</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Online%20Event%20Operation%20Analysis.html">
-   Online Event Optimization 🎟️
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Social Media Content Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Credit%20Worthiness%20Analysis.html">
-   Credit Worthiness Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="WeRateDogs%20Twitter%20Analysis.html">
-   WeRateDogs Twitter Analysis
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Online%20Event%20Operation%20Analysis.html">Online Event Optimization 🎟️</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Paid%20Social%20Ad%20Landing%20page%20AB%20Test.html">Paid Social A/B Testing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Social Media Content Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Credit%20Worthiness%20Analysis.html">Credit Worthiness Analysis</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="WeRateDogs%20Twitter%20Analysis.html">WeRateDogs Twitter Analysis</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Tutorials
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Portfolio%20with%20Jupyter%20book.html">
-   Portfolio with Jupyter book
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Portfolio%20with%20Jupyter%20book.html">Portfolio with Jupyter book</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/social_media.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsocial_media.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsocial_media.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/social_media.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/social_media.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Social Media Content Analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objective">
-   Objective
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measure-of-success">
-   Measure of Success
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-source">
-   Data Source
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#results">
-   Results
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#insights">
-   Insights
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#action-items">
-   Action items
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#limitation-and-future-project">
-   Limitation and future project
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#processing-tags">
-   Processing Tags
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dataframe-by-platforms">
-   DataFrame by platforms
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-to-use">
-     DATA TO USE
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-subsettings-for-content-types">
-   Creating Subsettings for content types
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualizayion-primary-content-category">
-   Visualizayion: Primary Content Category
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#performance-by-platform">
-     Performance by Platform
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#twitter">
-     Twitter
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#facebook">
-   Facebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instagram">
-   Instagram
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linkedin">
-   LinkedIn
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measure-of-success">Measure of Success</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source">Data Source</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insights">Insights</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-items">Action items</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitation-and-future-project">Limitation and future project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-tags">Processing Tags</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-by-platforms">DataFrame by platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-to-use">DATA TO USE</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-subsettings-for-content-types">Creating Subsettings for content types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizayion-primary-content-category">Visualizayion: Primary Content Category</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-by-platform">Performance by Platform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#twitter">Twitter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#facebook">Facebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instagram">Instagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linkedin">LinkedIn</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Social Media Content Analysis</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   Background
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objective">
-   Objective
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measure-of-success">
-   Measure of Success
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-source">
-   Data Source
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#results">
-   Results
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#insights">
-   Insights
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#action-items">
-   Action items
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#limitation-and-future-project">
-   Limitation and future project
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#processing-tags">
-   Processing Tags
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dataframe-by-platforms">
-   DataFrame by platforms
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-to-use">
-     DATA TO USE
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-subsettings-for-content-types">
-   Creating Subsettings for content types
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualizayion-primary-content-category">
-   Visualizayion: Primary Content Category
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#performance-by-platform">
-     Performance by Platform
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#twitter">
-     Twitter
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#facebook">
-   Facebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instagram">
-   Instagram
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linkedin">
-   LinkedIn
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="social-media-content-analysis">
-<h1>Social Media Content Analysis<a class="headerlink" href="#social-media-content-analysis" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="social-media-content-analysis">
+<h1>Social Media Content Analysis<a class="headerlink" href="#social-media-content-analysis" title="Permalink to this heading">#</a></h1>
 <p>I analyzed the performance of social media posts by content categories and social media platforms (Facebook, Instagram, Twitter, and LinkedIn) to identify the most optimal platform to communicate a company’s value propositions.</p>
 <p>The analysis relived that not only the posts about the company’s core values were underperforming compared to other content categories but also the value of posts the core values was much smaller. This result led me to focus on reinforcing the brand messaging as one of the strategic plans.</p>
-<div class="section" id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
 <p>My social media team’s goal was to communicate the company’s value propositions in engaging ways while maximizing the exposure (=impressions) of individual posts. In order to acquire high impressions (due to most of the social media’s algorithms), constantly posting highly engaging content is essential. However, the company’s core values are not necessarily “fun” topics to discuss, and it’s tempting to just post engagement-driven posts such as memes and pretty images.</p>
 <p>The social media team used to post the exact same content across 4 major social media channels (Facebook, LinkedIn, Instagram, and Twitter). However, as each platform has a different audience, it is required to create content that caters to each platform.</p>
-</div>
-<div class="section" id="objective">
-<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this heading">#</a></h2>
 <p>Identify the most optimal platform(s) for each core value.</p>
-</div>
-<div class="section" id="measure-of-success">
-<h2>Measure of Success<a class="headerlink" href="#measure-of-success" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="measure-of-success">
+<h2>Measure of Success<a class="headerlink" href="#measure-of-success" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Engagement rate (# of post engagement / # of impression) *– Engagement is user’ behaivors such as “Like”, “Comments”, and “Share”. Higher the engagement rate, the higher the quality of content is.</p></li>
 <li><p>The number of posts</p></li>
 <li><p>The number of impression <em>– This indicate how much a single social media post is shown on user’s timeline. This is usually used as an indirect measure of brand awareness</em></p></li>
 </ul>
-</div>
-<div class="section" id="data-source">
-<h2>Data Source<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="data-source">
+<h2>Data Source<a class="headerlink" href="#data-source" title="Permalink to this heading">#</a></h2>
 <p>The raw data of social media posts published between the past 12 months (January 1, 2020, December 21, 2020) were exported from a social media management platform, Sprout Social as <code class="docutils literal notranslate"><span class="pre">.csv</span></code>.</p>
 <p>Each post has a few tags representing the content categories and subcategories. Content categories are consist of company’s core values, values, and social media-specific content categories (such as memes, or user generated content). Subcategories are used to label campaigns, experimental posts, and types of products.</p>
 <p>For confidentiality, any information that can identify the company was scraped out for this case study. Content categories and subcategories are modified as below:</p>
@@ -490,9 +444,9 @@
 <li><p>Social media specific categories: corgi, husky</p></li>
 <li><p>Subcategories: Pokemon names</p></li>
 </ul>
-</div>
-<div class="section" id="results">
-<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>All three core values (core value 1, core value 2, core value 3) were not performing well across the platforms. Also, the number of posts about these core values is fewer than the other categories.</p></li>
 <li><p>The number of posts is heavily skewed to the “value 4” category on social media, and the category is performing well.</p></li>
@@ -500,13 +454,13 @@
 <li><p>The “value 6” content performs well on all channels except Facebook.</p></li>
 <li><p>The engagement of the “value 4” category on Facebook is higher than other content categories. However, the impression is not necessarily higher, which implies there might not be a strong correlation between post engagements and impression on Facebook.</p></li>
 </ul>
-</div>
-<div class="section" id="insights">
-<h2>Insights<a class="headerlink" href="#insights" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="insights">
+<h2>Insights<a class="headerlink" href="#insights" title="Permalink to this heading">#</a></h2>
 <p>Core values are not necessarily easy topics to cover on social media and making the topic engaging requires creativity. My assumption was the team did not fully understand the company’s values and how to talk about them. That’s why they tried to avoid the topic. Instead, they posted value 4 content because it’s an “easy win”.</p>
-</div>
-<div class="section" id="action-items">
-<h2>Action items<a class="headerlink" href="#action-items" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="action-items">
+<h2>Action items<a class="headerlink" href="#action-items" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>As the low performance of content about the three core values is a critical issue, reinforce the brand messaging to communicate core values by providing the social media team with brand training.</p></li>
 <li><p>Continue to produce the “value 4” content as it helps maintain the social media accounts’ engagement.</p></li>
@@ -514,9 +468,9 @@
 <li><p>Reduce the amount of the “value 6” content on Facebook.</p></li>
 <li><p>Explore new ways to improve Facebook’s organic impression since there is little correlation between post engagements and impressions. The basic strategy for social media is to improve engagement, which also helps organic impressions, but Facebook needs a different strategy.</p></li>
 </ul>
-</div>
-<div class="section" id="limitation-and-future-project">
-<h2>Limitation and future project<a class="headerlink" href="#limitation-and-future-project" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="limitation-and-future-project">
+<h2>Limitation and future project<a class="headerlink" href="#limitation-and-future-project" title="Permalink to this heading">#</a></h2>
 <p>The social media team had to manually tag the content type, which was extremely time-consuming. Also, tagging can be subjective without a clear guideline. This process could be improved by using NLP.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -697,9 +651,9 @@ memory usage: 107.5+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="processing-tags">
-<h2>Processing Tags<a class="headerlink" href="#processing-tags" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="processing-tags">
+<h2>Processing Tags<a class="headerlink" href="#processing-tags" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -828,16 +782,6 @@ memory usage: 107.5+ KB
   <tbody>
     <tr>
       <th>0</th>
-      <td>sandshrew</td>
-      <td>3</td>
-      <td>9392.0</td>
-      <td>893.0</td>
-      <td>0.10</td>
-      <td>297.67</td>
-      <td>3130.67</td>
-    </tr>
-    <tr>
-      <th>1</th>
       <td>blastoisemega blastoise</td>
       <td>10</td>
       <td>22244.0</td>
@@ -845,6 +789,16 @@ memory usage: 107.5+ KB
       <td>0.10</td>
       <td>212.70</td>
       <td>2224.40</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>sandshrew</td>
+      <td>3</td>
+      <td>9392.0</td>
+      <td>893.0</td>
+      <td>0.10</td>
+      <td>297.67</td>
+      <td>3130.67</td>
     </tr>
     <tr>
       <th>2</th>
@@ -896,11 +850,11 @@ memory usage: 107.5+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="dataframe-by-platforms">
-<h2>DataFrame by platforms<a class="headerlink" href="#dataframe-by-platforms" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="data-to-use">
-<h3>DATA TO USE<a class="headerlink" href="#data-to-use" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="dataframe-by-platforms">
+<h2>DataFrame by platforms<a class="headerlink" href="#dataframe-by-platforms" title="Permalink to this heading">#</a></h2>
+<section id="data-to-use">
+<h3>DATA TO USE<a class="headerlink" href="#data-to-use" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">twitter_cleaned</span></code>
 <code class="docutils literal notranslate"><span class="pre">facebook_cleaned</span></code>
 <code class="docutils literal notranslate"><span class="pre">instagram_cleaned</span></code>
@@ -1025,10 +979,10 @@ memory usage: 107.5+ KB
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="creating-subsettings-for-content-types">
-<h2>Creating Subsettings for content types<a class="headerlink" href="#creating-subsettings-for-content-types" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="creating-subsettings-for-content-types">
+<h2>Creating Subsettings for content types<a class="headerlink" href="#creating-subsettings-for-content-types" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tags</span>
@@ -1036,82 +990,82 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;metapod&#39;,
- &#39;tentacruel&#39;,
- &#39;charmander&#39;,
- &#39;abra&#39;,
- &#39;fearow&#39;,
- &#39;value 7&#39;,
- &#39;beedrill&#39;,
- &#39;primeape&#39;,
- &#39;value 4&#39;,
- &#39;nidoran♀&#39;,
- &#39;pidgeotto&#39;,
- &#39;value 6&#39;,
- &#39;kakuna&#39;,
- &#39;cleponytable&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;alakazam&#39;,
  &#39;ivysaur&#39;,
- &#39;geodude&#39;,
- &#39;spikachuing start&#39;,
- &#39;growlithe&#39;,
- &#39;persian&#39;,
- &#39;blastoise&#39;,
- &#39;charizardmega charizard x&#39;,
- &#39;beedrclefable&#39;,
- &#39;charizardmega charizard y&#39;,
- &#39;venonat&#39;,
- &#39;metapodmencement&#39;,
- &#39;paras&#39;,
- &#39;dugtrio&#39;,
- &#39;nidorino&#39;,
- &#39;vulpix&#39;,
- &#39;core value 1&#39;,
- &#39;venomoth&#39;,
- &#39;ponyta&#39;,
- &#39;poliwhirl&#39;,
- &#39;ekans&#39;,
- &#39;squirtle&#39;,
- &#39;parasect&#39;,
- &#39;machamp&#39;,
- &#39;value 5&#39;,
- &#39;raticate&#39;,
- &#39;golem&#39;,
- &#39;pidgeot&#39;,
  &#39;vileplume&#39;,
- &#39;psyduck&#39;,
- &#39;venusaurmega venusaur&#39;,
- &#39;oddish&#39;,
- &#39;german shebellsprouterd&#39;,
+ &#39;alakazammega alakazam&#39;,
+ &#39;ekans&#39;,
+ &#39;nidoran♀&#39;,
+ &#39;venusaur&#39;,
+ &#39;nidorino&#39;,
+ &#39;nidoran♂&#39;,
+ &#39;venomoth&#39;,
+ &#39;blastoisemega blastoise&#39;,
+ &#39;tentacruel&#39;,
+ &#39;blastoise&#39;,
+ &#39;primeape&#39;,
+ &#39;tentacool&#39;,
+ &#39;corgi&#39;,
+ &#39;value 7 corgi&#39;,
+ &#39;growlithe&#39;,
+ &#39;charizardmega charizard x&#39;,
+ &#39;value 4&#39;,
+ &#39;beedrclefable&#39;,
+ &#39;persian&#39;,
+ &#39;ponyta&#39;,
+ &#39;charmander&#39;,
+ &#39;golem&#39;,
+ &#39;geodude&#39;,
+ &#39;value 7&#39;,
+ &#39;value 6&#39;,
+ &#39;husky&#39;,
+ &#39;weepinbell&#39;,
+ &#39;clefable&#39;,
+ &#39;machop&#39;,
+ &#39;weedle&#39;,
  &#39;mankey&#39;,
  &#39;golbat&#39;,
- &#39;alakazam&#39;,
- &#39;core value 2&#39;,
- &#39;poliwag&#39;,
- &#39;machop&#39;,
- &#39;nidoqueen&#39;,
- &#39;alakazammega alakazam&#39;,
- &#39;spearow&#39;,
- &#39;weepinbell&#39;,
- &#39;bellsprout&#39;,
- &#39;wartortle&#39;,
- &#39;corgi&#39;,
- &#39;husky&#39;,
- &#39;sandslash&#39;,
- &#39;tentacool&#39;,
- &#39;nidoran♂&#39;,
- &#39;pidgeotmega pidgeot&#39;,
- &#39;clefable&#39;,
- &#39;butterfree&#39;,
- &#39;rattata&#39;,
- &#39;clefairy&#39;,
- &#39;core value 3&#39;,
  &#39;meowth&#39;,
+ &#39;venusaurmega venusaur&#39;,
  &#39;arcanine&#39;,
+ &#39;german shebellsprouterd&#39;,
+ &#39;pidgeotto&#39;,
+ &#39;pidgeotmega pidgeot&#39;,
+ &#39;metapod&#39;,
+ &#39;poliwhirl&#39;,
+ &#39;cleponytable&#39;,
+ &#39;pidgeot&#39;,
+ &#39;paras&#39;,
  &#39;golduck&#39;,
- &#39;value 7 corgi&#39;,
- &#39;weedle&#39;,
- &#39;blastoisemega blastoise&#39;,
- &#39;venusaur&#39;]
+ &#39;abra&#39;,
+ &#39;clefairy&#39;,
+ &#39;core value 2&#39;,
+ &#39;metapodmencement&#39;,
+ &#39;machamp&#39;,
+ &#39;kakuna&#39;,
+ &#39;vulpix&#39;,
+ &#39;squirtle&#39;,
+ &#39;dugtrio&#39;,
+ &#39;core value 1&#39;,
+ &#39;psyduck&#39;,
+ &#39;parasect&#39;,
+ &#39;sandslash&#39;,
+ &#39;butterfree&#39;,
+ &#39;venonat&#39;,
+ &#39;fearow&#39;,
+ &#39;core value 3&#39;,
+ &#39;wartortle&#39;,
+ &#39;beedrill&#39;,
+ &#39;value 5&#39;,
+ &#39;oddish&#39;,
+ &#39;spikachuing start&#39;,
+ &#39;nidoqueen&#39;,
+ &#39;raticate&#39;,
+ &#39;bellsprout&#39;,
+ &#39;rattata&#39;,
+ &#39;poliwag&#39;,
+ &#39;spearow&#39;,
+ &#39;charizardmega charizard y&#39;]
 </pre></div>
 </div>
 </div>
@@ -1131,34 +1085,34 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;sandshrew&#39;, &#39;blastoisemega blastoise&#39;, &#39;nidoran♀&#39;, &#39;golem&#39;,
-       &#39;victreebel&#39;, &#39;beedrclefable&#39;, &#39;nidorino&#39;, &#39;bellsprout&#39;, &#39;golbat&#39;,
-       &#39;german shebellsprouterd&#39;, &#39;machoke&#39;, &#39;raichu&#39;, &#39;nidoking&#39;,
-       &#39;vileplume&#39;, &#39;value 7 corgi&#39;, &#39;venonat&#39;, &#39;ekans&#39;, &#39;value 6&#39;,
-       &#39;pikachu&#39;, &#39;arcanine&#39;, &#39;ninetales&#39;, &#39;primeape&#39;, &#39;nidoran♂&#39;,
-       &#39;rattata&#39;, &#39;parasect&#39;, &#39;nidoqueen&#39;, &#39;value 5&#39;, &#39;poliwag&#39;, &#39;husky&#39;,
-       &#39;fearow&#39;, &#39;metapodmencement&#39;, &#39;alakazam&#39;, &#39;corgi&#39;, &#39;diglett&#39;,
-       &#39;golduck&#39;, &#39;weedle&#39;, &#39;abra&#39;, &#39;mankey&#39;, &#39;psyduck&#39;, &#39;value 4&#39;,
-       &#39;tentacruel&#39;, &#39;clefable&#39;, &#39;beedrill&#39;, &#39;charizardmega charizard y&#39;,
-       &#39;pidgeotto&#39;, &#39;kakuna&#39;, &#39;blastoise&#39;, &#39;charmeleon&#39;, &#39;wartortle&#39;,
-       &#39;squirtle&#39;, &#39;butterfree&#39;, &#39;clefairy&#39;, &#39;graveler&#39;, &#39;persian&#39;,
-       &#39;ponyta&#39;, &#39;machamp&#39;, &#39;venusaurmega venusaur&#39;,
-       &#39;pidgeotmega pidgeot&#39;, &#39;meowth&#39;, &#39;cleponytable&#39;, &#39;oddish&#39;,
-       &#39;core value 3&#39;, &#39;venusaur&#39;, &#39;core value 1&#39;, &#39;vulpix&#39;, &#39;pidgeot&#39;,
-       &#39;weepinbell&#39;, &#39;charmander&#39;, &#39;ivysaur&#39;, &#39;sandslash&#39;, &#39;growlithe&#39;,
-       &#39;poliwhirl&#39;, &#39;venomoth&#39;, &#39;charizardmega charizard x&#39;, &#39;metapod&#39;,
-       &#39;nidorina&#39;, &#39;core value 2&#39;, &#39;alakazammega alakazam&#39;,
-       &#39;spikachuing start&#39;, &#39;dugtrio&#39;, &#39;machop&#39;, &#39;value 7&#39;, &#39;geodude&#39;,
-       &#39;pidgey&#39;, &#39;gloom&#39;, &#39;charizard&#39;, &#39;pikachue college&#39;, &#39;raticate&#39;,
-       &#39;arbok&#39;, &#39;zubat&#39;, &#39;paras&#39;, &#39;spearow&#39;, &#39;poliwrath&#39;, &#39;tentacool&#39;,
-       &#39;caterpie&#39;], dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;blastoisemega blastoise&#39;, &#39;sandshrew&#39;, &#39;nidoran♀&#39;, &#39;golem&#39;,
+       &#39;victreebel&#39;, &#39;beedrclefable&#39;, &#39;golbat&#39;, &#39;vileplume&#39;, &#39;machoke&#39;,
+       &#39;venonat&#39;, &#39;german shebellsprouterd&#39;, &#39;bellsprout&#39;,
+       &#39;value 7 corgi&#39;, &#39;nidoking&#39;, &#39;nidorino&#39;, &#39;raichu&#39;, &#39;primeape&#39;,
+       &#39;value 5&#39;, &#39;ninetales&#39;, &#39;husky&#39;, &#39;arcanine&#39;, &#39;pikachu&#39;, &#39;poliwag&#39;,
+       &#39;rattata&#39;, &#39;ekans&#39;, &#39;nidoqueen&#39;, &#39;value 6&#39;, &#39;nidoran♂&#39;,
+       &#39;metapodmencement&#39;, &#39;fearow&#39;, &#39;parasect&#39;, &#39;charmeleon&#39;, &#39;psyduck&#39;,
+       &#39;golduck&#39;, &#39;pidgeotto&#39;, &#39;mankey&#39;, &#39;weedle&#39;, &#39;ponyta&#39;, &#39;persian&#39;,
+       &#39;tentacruel&#39;, &#39;butterfree&#39;, &#39;beedrill&#39;,
+       &#39;charizardmega charizard y&#39;, &#39;value 4&#39;, &#39;diglett&#39;, &#39;alakazam&#39;,
+       &#39;blastoise&#39;, &#39;kakuna&#39;, &#39;corgi&#39;, &#39;clefable&#39;, &#39;clefairy&#39;, &#39;squirtle&#39;,
+       &#39;abra&#39;, &#39;graveler&#39;, &#39;wartortle&#39;, &#39;venusaur&#39;, &#39;core value 3&#39;,
+       &#39;charizardmega charizard x&#39;, &#39;ivysaur&#39;, &#39;vulpix&#39;, &#39;sandslash&#39;,
+       &#39;growlithe&#39;, &#39;poliwhirl&#39;, &#39;machamp&#39;, &#39;pidgeot&#39;, &#39;cleponytable&#39;,
+       &#39;core value 1&#39;, &#39;venomoth&#39;, &#39;meowth&#39;, &#39;charmander&#39;,
+       &#39;venusaurmega venusaur&#39;, &#39;oddish&#39;, &#39;weepinbell&#39;,
+       &#39;pidgeotmega pidgeot&#39;, &#39;value 7&#39;, &#39;spikachuing start&#39;, &#39;nidorina&#39;,
+       &#39;metapod&#39;, &#39;dugtrio&#39;, &#39;machop&#39;, &#39;core value 2&#39;,
+       &#39;alakazammega alakazam&#39;, &#39;geodude&#39;, &#39;paras&#39;, &#39;pidgey&#39;, &#39;zubat&#39;,
+       &#39;poliwrath&#39;, &#39;tentacool&#39;, &#39;raticate&#39;, &#39;arbok&#39;, &#39;pikachue college&#39;,
+       &#39;spearow&#39;, &#39;charizard&#39;, &#39;gloom&#39;, &#39;caterpie&#39;], dtype=object)
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="visualizayion-primary-content-category">
-<h2>Visualizayion: Primary Content Category<a class="headerlink" href="#visualizayion-primary-content-category" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="visualizayion-primary-content-category">
+<h2>Visualizayion: Primary Content Category<a class="headerlink" href="#visualizayion-primary-content-category" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
@@ -1178,8 +1132,8 @@ memory usage: 107.5+ KB
 </div>
 </div>
 </div>
-<div class="section" id="performance-by-platform">
-<h3>Performance by Platform<a class="headerlink" href="#performance-by-platform" title="Permalink to this headline">¶</a></h3>
+<section id="performance-by-platform">
+<h3>Performance by Platform<a class="headerlink" href="#performance-by-platform" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">twitter_primary</span> <span class="o">=</span> <span class="n">twitter</span><span class="p">[</span><span class="n">twitter</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">primary_content</span><span class="p">)]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1228,7 +1182,7 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/social_media_37_0.png" src="_images/social_media_37_0.png" />
+<img alt="_images/a107941a63a84c628e2e3e7eb391e2be0b7a7b3c260e840d26d36005d1c005cb.png" src="_images/a107941a63a84c628e2e3e7eb391e2be0b7a7b3c260e840d26d36005d1c005cb.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1264,7 +1218,7 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/social_media_38_0.png" src="_images/social_media_38_0.png" />
+<img alt="_images/ef88134355f7a9a646d5e77728e4f38ba1709d30ca0481d3246cf78103aef740.png" src="_images/ef88134355f7a9a646d5e77728e4f38ba1709d30ca0481d3246cf78103aef740.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1299,7 +1253,7 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/social_media_39_0.png" src="_images/social_media_39_0.png" />
+<img alt="_images/82b1ca12800a420282ad4f2fdf7d90b0024e46be81eaa4dfdba036bab716d3b2.png" src="_images/82b1ca12800a420282ad4f2fdf7d90b0024e46be81eaa4dfdba036bab716d3b2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1335,12 +1289,12 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/social_media_40_0.png" src="_images/social_media_40_0.png" />
+<img alt="_images/f0a917e9f311fd8a917f70f63ec43b809b218c2617f3fdfcf5514c6565bfd200.png" src="_images/f0a917e9f311fd8a917f70f63ec43b809b218c2617f3fdfcf5514c6565bfd200.png" />
 </div>
 </div>
-</div>
-<div class="section" id="twitter">
-<h3>Twitter<a class="headerlink" href="#twitter" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="twitter">
+<h3>Twitter<a class="headerlink" href="#twitter" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes_t</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -1374,13 +1328,13 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/social_media_42_0.png" src="_images/social_media_42_0.png" />
+<img alt="_images/cc84a13afdea352fc0ecdb450db419d8c40dcf284845074c43b860a537fd1a89.png" src="_images/cc84a13afdea352fc0ecdb450db419d8c40dcf284845074c43b860a537fd1a89.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="facebook">
-<h2>Facebook<a class="headerlink" href="#facebook" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="facebook">
+<h2>Facebook<a class="headerlink" href="#facebook" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes_f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -1414,12 +1368,12 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/social_media_44_0.png" src="_images/social_media_44_0.png" />
+<img alt="_images/f6b9ba4bdee3cf0ff1479a5d3113376aa5a6a1e8517719c0df77acaa40d41ff8.png" src="_images/f6b9ba4bdee3cf0ff1479a5d3113376aa5a6a1e8517719c0df77acaa40d41ff8.png" />
 </div>
 </div>
-</div>
-<div class="section" id="instagram">
-<h2>Instagram<a class="headerlink" href="#instagram" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="instagram">
+<h2>Instagram<a class="headerlink" href="#instagram" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes_i</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -1453,12 +1407,12 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/social_media_46_0.png" src="_images/social_media_46_0.png" />
+<img alt="_images/c23740db4af7f6f50e4967b6e3bf39f69ea5aa0fabdda783aa99aab945a94eba.png" src="_images/c23740db4af7f6f50e4967b6e3bf39f69ea5aa0fabdda783aa99aab945a94eba.png" />
 </div>
 </div>
-</div>
-<div class="section" id="linkedin">
-<h2>LinkedIn<a class="headerlink" href="#linkedin" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="linkedin">
+<h2>LinkedIn<a class="headerlink" href="#linkedin" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes_l</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -1492,11 +1446,11 @@ memory usage: 107.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/social_media_48_0.png" src="_images/social_media_48_0.png" />
+<img alt="_images/14f481fb82707c8a2e18302f3c001b60a14439cf0563e2a27f95f5e0df626f60.png" src="_images/14f481fb82707c8a2e18302f3c001b60a14439cf0563e2a27f95f5e0df626f60.png" />
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1510,7 +1464,7 @@ memory usage: 107.5+ KB
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1518,44 +1472,123 @@ memory usage: 107.5+ KB
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Online%20Event%20Operation%20Analysis.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Online Event Optimization 🎟️</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Paid%20Social%20Ad%20Landing%20page%20AB%20Test.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Paid Social A/B Testing</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Credit%20Worthiness%20Analysis.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Credit%20Worthiness%20Analysis.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Credit Worthiness Analysis</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Wakana Morlan<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measure-of-success">Measure of Success</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source">Data Source</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insights">Insights</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-items">Action items</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitation-and-future-project">Limitation and future project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-tags">Processing Tags</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-by-platforms">DataFrame by platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-to-use">DATA TO USE</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-subsettings-for-content-types">Creating Subsettings for content types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizayion-primary-content-category">Visualizayion: Primary Content Category</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-by-platform">Performance by Platform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#twitter">Twitter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#facebook">Facebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instagram">Instagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linkedin">LinkedIn</a></li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wakana Morlan
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022-2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
